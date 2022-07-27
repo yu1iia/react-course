@@ -7,10 +7,11 @@ const styles = {
 
 const Panel = ({ title, children }) => (
   <div style={styles}>
-    {title && <h2>{title}</h2>} // если true слева, рендрится то что справа !!!
+    {title && <h2>{title}</h2>}
     {children}
   </div>
 );
+// если true слева, рендрится то что справа !!!
 
 // если не обязательные значения, то поставить значения по умолчанию !!
 Panel.defaultProps = {
