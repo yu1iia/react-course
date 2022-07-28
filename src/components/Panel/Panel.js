@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
-const styles = {
-  outline: '1px solid tomato',
-};
+import styles from './Panel.module.css';
 
 const Panel = ({ title, children }) => (
-  <div style={styles}>
+  <div className={styles.container}>
     {title && <h2>{title}</h2>}
     {children}
   </div>
