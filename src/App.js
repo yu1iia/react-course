@@ -1,9 +1,12 @@
 import React from 'react';
 import PaintingList from './components/PaintingList/PaintingList';
-import Logo from './components/Logo';
-import Panel from './components/Panel';
+// import AppBar from './components/AppBar/AppBar';
+import Layout from './components/Layout/Layout';
+import Notification from './components/Notification/Notification';
+import Panel from './components/Panel/Panel';
 import paintings from './paintings.json';
 import ColorPicker from './components/ColorPicker/ColorPicker';
+// import Container from './components/Container/Container';
 
 const colorPickerOptions = [
   { label: 'red', color: '#F44336' },
@@ -16,12 +19,16 @@ const colorPickerOptions = [
 
 const App = () => {
   return (
-    <div>
+    <Layout>
       <ColorPicker options={colorPickerOptions} />
-      <Panel />
-      <Logo />
 
-      <PaintingList paintings={paintings} />
+      <Notification text="Всё хорошо" type="success" />
+
+      <Notification text="Всё плохо" type="error" />
+
+      <Panel>
+        <PaintingList paintings={paintings} />
+      </Panel>
 
       {/* <ul>
         {paintings.map(painting => (
@@ -54,7 +61,7 @@ const App = () => {
         tag={paintings[2].author.tag}
         quantity={paintings[2].quantity}
       /> */}
-    </div>
+    </Layout>
   );
 };
 
