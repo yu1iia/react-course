@@ -40,7 +40,7 @@ class ColorPicker extends Component {
         <h2 className="ColorPicker__title">Color Picker</h2>
         <p>Выбран цвет: {label}</p>
         <div>
-          {this.props.options.map(({ label, color }, index) => {
+          {options.map(({ label, color }, index) => {
             return (
               <button
                 key={label}
