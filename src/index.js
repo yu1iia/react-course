@@ -1,28 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import 'modern-normalize/modern-normalize.css';
-import './styles.css';
-// ReactDOM.render(<App/>, document.getElementById("root"));
+import './styles/base.scss';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowserRouter>,
   document.getElementById('root'),
 );
-
-// const link = React.createElement('a', { href: 'reactjs.org', target: 'blank' }, 'link')
-
-// const template = (
-//   <div>
-//     <img src={painting.url} alt={painting.title} width="480" />
-//     <h2>{painting.title}</h2>
-//     <p>
-//       Автор: <a href={painting.author.url}>{painting.author.tag}</a>
-//     </p>
-//     <p>Цена {painting.price} кредитов</p>
-//     <button type="button">Добавить в корзину</button>
-//   </div>
-// );
-// console.log(template);
